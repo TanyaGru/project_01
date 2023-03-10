@@ -25,9 +25,9 @@ while B==A:
     B=random.randint(0, 8)
 while C==B or C==A:
     C=random.randint(0, 8)
-x=round(my_favorite_songs[A][1]+my_favorite_songs[B][1]+my_favorite_songs[C][1], 2)
+sum=round(my_favorite_songs[A][1]+my_favorite_songs[B][1]+my_favorite_songs[C][1], 2)
 #print(A,B,C)
-print(f'Три песни звучат {x} минут')
+print(f'Три песни звучат {sum} минут')
 
 print ('\nПункт B.') 
 # Есть словарь песен 
@@ -68,8 +68,9 @@ print('Случайная песня из словаря:', list(g)[random.randi
 print('\nПункт D.!!!!!!!!!!!!!!\n')
 # Переведите минуты и секунды в формат времени. Используйте модуль 
 import datetime 
-sec=int(round((my_favorite_songs[0][1]-int(my_favorite_songs[0][1]))*100))
-timeobj=datetime.time(0,int(my_favorite_songs[0][1]),sec)
+i=8
+sec=int(round((my_favorite_songs[i][1]-int(my_favorite_songs[i][1]))*100))
+timeobj=datetime.time(0,int(my_favorite_songs[i][1]),sec)
 print(timeobj)
 
 
