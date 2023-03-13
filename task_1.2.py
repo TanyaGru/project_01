@@ -18,15 +18,8 @@ my_favorite_songs = [
     ['In This World', 4.02],
 ]
 import random
-A=random.randint(0, 8)
-B=random.randint(0, 8)
-C=random.randint(0, 8)
-while B==A:
-    B=random.randint(0, 8)
-while C==B or C==A:
-    C=random.randint(0, 8)
-sum=round(my_favorite_songs[A][1]+my_favorite_songs[B][1]+my_favorite_songs[C][1], 2)
-#print(A,B,C)
+sml=random.sample(range(0,8),3)
+sum=round(my_favorite_songs[sml[0]][1]+my_favorite_songs[sml[1]][1]+my_favorite_songs[sml[2]][1], 2)
 print(f'Три песни звучат {sum} минут')
 
 print ('\nПункт B.') 
@@ -46,15 +39,9 @@ my_favorite_songs_dict = {
     'In This World': 4.02,
 }
 values=list(my_favorite_songs_dict.values())
-A=random.randint(0, 8)
-B=random.randint(0, 8)
-C=random.randint(0, 8)
-while B==A:
-    B=random.randint(0, 8)
-while C==B or C==A:
-    C=random.randint(0, 8)
-x=round(values[A]+values[B]+values[C], 2)
-print(f'Три песни звучат {x} минут')
+sml=random.sample(range(0,8),3)
+sum=round(values[sml[0]]+values[sml[1]]+values[sml[2]], 2)
+print(f'Три песни звучат {sum} минут')
 # Дополнительно для пунктов A и B
 print ('\nПункт C.')
 # Сгенерируйте случайные песни с помощью модуля random
@@ -65,12 +52,19 @@ g=my_favorite_songs_dict.keys()
 print('Случайная песня из словаря:', list(g)[random.randint(0, 8)])
 
 # Дополнительно 
-print('\nПункт D.!!!!!!!!!!!!!!\n')
+print('\nПункт D.')
 # Переведите минуты и секунды в формат времени. Используйте модуль 
 import datetime 
-i=8
+i=random.randint(0, 8)
 sec=int(round((my_favorite_songs[i][1]-int(my_favorite_songs[i][1]))*100))
-timeobj=datetime.time(0,int(my_favorite_songs[i][1]),sec)
-print(timeobj)
+timeobj=datetime.time(0,int(my_favorite_songs[i][1]),sec).strftime("%M:%S")
+print(timeobj,'\n')
+
+
+#Если после запятой сотые доли минуты
+#import time
+#n=my_favorite_songs[i][1]*60
+#time_format=time.strftime("%M:%S", time.gmtime(n))
+#print(time_format,'\n')
 
 

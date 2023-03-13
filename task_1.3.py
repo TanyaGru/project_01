@@ -30,8 +30,7 @@ days_in_month= [
     [11,'ноябрь', 30],
     [12,'декабрь', 31],
 ]
-number=input('Введите номер месяца:')
-number2=int(number)
-if 0<=number2<=12:
-    print(f'Вы ввели {days_in_month[number2-1][1]}. {days_in_month[number2-1][2]} дней.')
-else: print('Такого месяца нет!')
+number=int(input('\nВведите номер месяца:'))
+if 0<number<=12:
+    print(f'Вы ввели {days_in_month[number-1][1]}. {days_in_month[number-1][2]} дней.\n')
+else: print('Такого месяца нет!\n')

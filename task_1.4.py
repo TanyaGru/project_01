@@ -36,7 +36,7 @@ for item_titles in list(titles.keys()):
     index_titles=list(titles.keys()).index(item_titles)
     qt=0
     pr=0
-    k=store[list(titles.values())[index_titles]] #список количества и цен для определенного артикула из store
+    k=store[list(titles.values())[index_titles]] # список количества и цен для определенного артикула из store
     for item_k in k:
         index_k=k.index(item_k)
         qt+=k[index_k]['quantity']
