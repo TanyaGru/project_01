@@ -32,14 +32,18 @@ store = {
 
 
 print('\n')
-for item_titles in list(titles.keys()):
-    index_titles=list(titles.keys()).index(item_titles)
+for item_titles in titles:
     qt=0
     pr=0
-    k=store[list(titles.values())[index_titles]] # список количества и цен для определенного артикула из store
-    for item_k in k:
-        index_k=k.index(item_k)
-        qt+=k[index_k]['quantity']
-        pr+=k[index_k]['quantity']*k[index_k]['price']
+    m=store[titles[item_titles]] # список количества и цен для определенного артикула из store
+    for item_m in m:
+        qt+=item_m['quantity']
+        pr+=item_m['quantity']*item_m['price']
     print(f'{item_titles} - {qt} шт., стоимость {pr} руб.')
 print('\n')
+
+
+
+
+
+
