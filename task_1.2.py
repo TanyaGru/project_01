@@ -67,4 +67,17 @@ print(timeobj,'\n')
 #time_format=time.strftime("%M:%S", time.gmtime(n))
 #print(time_format,'\n')
 
+# К сожалению, есть вероятность, что будет ошибка(
+# Вот вариант мой
+from datetime import timedelta
+from math import modf
+from random import sample
 
+
+total_time = timedelta()
+
+for song in sample(my_favorite_songs, 3):
+    s, m = modf(song[1])
+    total_time += timedelta(minutes=int(m), seconds=int(s * 100))
+
+print(f'Три песни звучат {total_time} минут')
