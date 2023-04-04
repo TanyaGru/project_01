@@ -64,3 +64,10 @@ remove_word_with_one_em("Hi Hi! Hi!")
 remove_word_with_one_em("Hi! !Hi Hi!")
 remove_word_with_one_em("Hi! Hi!! Hi!")
 remove_word_with_one_em("Hi! !Hi! Hi!")
+
+# Отлично) Решение третьего пункта можно написать покороче
+
+def remove_word_with_one_em(s):
+    return ' '.join([w for w in s.split(' ') if w.count('!')!=1])
+
+print(remove_word_with_one_em("Hi! Hi!! Hi!"))
