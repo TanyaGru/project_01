@@ -43,6 +43,9 @@ sml=random.sample(range(0,8),3)
 sum=round(values[sml[0]]+values[sml[1]]+values[sml[2]], 2)
 print(f'Три песни звучат {sum} минут')
 # Дополнительно для пунктов A и B
+
+print("Start")
+
 print ('\nПункт C.')
 # Сгенерируйте случайные песни с помощью модуля random
 # import random
@@ -59,8 +62,6 @@ i=random.randint(0, 8)
 sec=int(round((my_favorite_songs[i][1]-int(my_favorite_songs[i][1]))*100))
 timeobj=datetime.time(0,int(my_favorite_songs[i][1]),sec).strftime("%M:%S")
 print(timeobj,'\n')
-
-
 #Если после запятой сотые доли минуты
 #import time
 #n=my_favorite_songs[i][1]*60

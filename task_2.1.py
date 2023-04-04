@@ -27,7 +27,7 @@ def maximum(arr):
     for item in arr:
         if max<item:
             max=item
-    return(max)
+    return max
 
 print(f'\nВ списке {a}: min={minimum(a)}, max={maximum(a)}')
 print(f'\nВ списке {b}: min={minimum(b)}, max={maximum(b)}')
