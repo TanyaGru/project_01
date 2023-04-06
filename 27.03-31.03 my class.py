@@ -162,7 +162,3 @@ acc0=Root('very secret token')
 acc0.inspect()
 
 
-o=[]
-if len(o) >=1:
-    print ('true')
-else: print ('False')
